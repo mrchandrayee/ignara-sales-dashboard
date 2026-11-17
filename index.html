@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ignara — Sales Dashboard</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="app-shell">
+<aside class="sidebar">
+ <div class="brand"><span class="brand-mark">◉</span><div><b>Ignara</b><small>Hearthwell networks</small></div><button class="collapse" aria-label="Collapse sidebar">▣</button></div>
+ <button class="new-btn" id="newOrder"><span>＋</span> New <kbd>N</kbd></button>
+ <div class="nav-label">SELL</div>
+ <nav class="nav">
+  <button data-page="Overview" class="nav-item"><span>⌂</span>Overview</button>
+  <button data-page="Sales" class="nav-item active"><span>⌁</span>Sales</button>
+  <button data-page="Orders" class="nav-item"><span>▤</span>Orders <em>38</em></button>
+  <button data-page="Products" class="nav-item"><span>◇</span>Products <em>3</em></button>
+  <button data-page="Customers" class="nav-item"><span>♙</span>Customers</button>
+ </nav>
+ <div class="nav-label">MONEY &amp; TEAM</div>
+ <nav class="nav">
+  <button data-page="Wallet" class="nav-item"><span>▣</span>Wallet <em>2</em></button>
+  <button data-page="Bonus" class="nav-item"><span>♧</span>Bonus</button>
+  <button data-page="Events" class="nav-item"><span>◷</span>Events <em>3</em></button>
+ </nav>
+ <div class="nav-bottom">
+  <button class="nav-item"><span>⚙</span>Settings</button><button class="nav-item"><span>ⓘ</span>Help</button>
+  <div class="today-card"><div class="ring">48%</div><div><small>Today so far</small><b>£1,339</b><small>7 orders · goal £2,800</small></div></div>
+ </div>
+</aside>
+<main class="main">
+ <header class="topbar">
+  <div class="search"><span>⌕</span><input id="search" placeholder="Search orders, products, customers…"><kbd>⌘K</kbd></div>
+  <div class="top-actions"><span class="date"><i></i> Tuesday 10 November</span><button class="icon-btn" id="themeBtn" title="Toggle theme">☼</button><button class="icon-btn bell">♧<sup>2</sup></button><div class="profile"><span>NC</span><div><b>Noor Castellanos</b><small>Head of sales</small></div><span>⌄</span></div></div>
+ </header>
+ <section class="page-head"><div><h1 id="pageTitle">Sales</h1><p id="pageSub">What Hearthwell took, where it came from, and what sold.</p></div><button class="outline-btn" id="exportBtn">⇩ &nbsp;Export CSV</button></section>
+ <div class="tabs" id="salesTabs"><button class="tab active" data-tab="Takings">Takings</button><button class="tab" data-tab="Channels">Channels</button><button class="tab" data-tab="Best sellers">Best sellers</button></div>
+ <section id="content" class="content"></section>
+</main>
+</div>
+<div class="modal-backdrop" id="modal"><div class="modal"><button class="modal-x" id="closeModal">×</button><div class="eyebrow">QUICK CREATE</div><h2>New order</h2><p>Add an order to the local dashboard demo.</p><label>Customer name<input id="customerName" placeholder="e.g. Alex Morgan"></label><label>Order value (£)<input id="orderValue" type="number" min="1" placeholder="89.00"></label><label>Channel<select id="orderChannel"><option>Web shop</option><option>Stockists</option><option>Markets</option><option>Marketplace</option></select></label><button class="primary wide" id="saveOrder">Create order <span>→</span></button></div></div>
+<div class="toast" id="toast"></div><script src="app.js"></script></body></html>
